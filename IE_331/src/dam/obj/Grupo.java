@@ -77,11 +77,16 @@ public class Grupo {
 						
 	}
 	
-	public void eliminar_disco () {
+	public boolean eliminar_disco () {
 		String aux=JOptionPane.showInputDialog("Introduzca el nombre del disco que desea eliminar");
-		aux.toLowerCase();
-		discografia.remove(aux);
-			
+			aux.toLowerCase();
+		if (discografia.remove(aux)==null) {
+			JOptionPane.showMessageDialog(null, "El disco introducido no existe");
+			return false;
+		}else{
+			discografia.remove(aux);
+			return true;	
+		}
 	}
 	
 	public void imprimir_grupo() {
