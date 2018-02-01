@@ -12,7 +12,6 @@ public class Menu {
 		String pais="España";
 		String nombre_cd="el cd";
 		int agno=2015;
-		
 		String estilo="jazz";
 		int pistas=9;
 		//

@@ -18,21 +18,40 @@ public class Grupo {
 	}
 	//
 	Grupo (String nombre, String pais, int n_inte, Representante repre){
-		this.nombre=nombre;
-		this.pais=pais;
-		this.num_integrantes=n_inte;
-		discografia=new TreeMap<String, CD>();
-		representante= new Representante();
+		boolean aux=true;
+		do {
+			
+			try {
+		
+			this.nombre=nombre;
+			this.pais=pais;
+			this.num_integrantes=n_inte;
+			discografia=new TreeMap<String, CD>();
+			representante= new Representante();
+			}catch (NumberFormatException nfe){
+				aux=false;
+				JOptionPane.showMessageDialog(null, "Debe introducir un numero para indicar el numero de integrantes");
+				nfe.printStackTrace();}
+		}while (aux==false);
 	}
+	
+	
 	Grupo (String nombre, String pais, int n_inte, String nrep, int edad, float sueldo){
-		
-		this.nombre=nombre;
-		this.pais=pais;
-		this.num_integrantes=n_inte;
-		discografia=new TreeMap<String, CD>();
-		representante= new Representante(nrep, edad, sueldo);		
-		
-	}
+		boolean aux=true;
+		do {
+			
+			try {
+				this.nombre=nombre;
+				this.pais=pais;
+				this.num_integrantes=n_inte;
+				discografia=new TreeMap<String, CD>();
+				representante= new Representante(nrep, edad, sueldo);		
+			}catch (NumberFormatException nfe){
+				aux=false;
+				JOptionPane.showMessageDialog(null, "Debe introducir un numero para indicar el numero de integrantes");
+				nfe.printStackTrace();}
+		}while (aux==false);
+}
 	
 	
 	public String toString () {
