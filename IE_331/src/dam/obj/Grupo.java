@@ -16,7 +16,7 @@ public class Grupo {
 	
 	Grupo (){
 	}
-	
+	//
 	Grupo (String nombre, String pais, int n_inte, Representante repre){
 		this.nombre=nombre;
 		this.pais=pais;

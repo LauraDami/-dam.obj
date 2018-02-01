@@ -15,7 +15,7 @@ public class CD {
 			this.estilo=Estilos.getEstilo(estilo);
 			this.pistas=pistas;
 		}
-		//comentario
+		//comentario1
 		@Override
 		public boolean equals (Object obj) {
 			if (obj==null) {return false;}

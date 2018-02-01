@@ -15,7 +15,7 @@ public class Menu {
 		
 		String estilo="jazz";
 		int pistas=9;
-		
+		//
 		Representante repres=new Representante(nombre_representante, edad, sueldo);
 		//CD cd=new CD(nombre_cd, agno, estilo, pistas);
 		Grupo grupo=new Grupo (nombre_grupo, pais, 4, repres);

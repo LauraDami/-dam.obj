@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 
 public class Operaciones {
 	
-	public void disco_nuevo() {
+/*	public void disco_nuevo() {
 		try {		
 			String nombre=JOptionPane.showInputDialog("Introduzca el nombre del disco que desea introducir");
 			int agno=Integer.parseInt(JOptionPane.showInputDialog("Introduzca el agno del disco"));

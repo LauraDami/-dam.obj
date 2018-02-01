@@ -11,7 +11,7 @@ public class Representante {
 		this.edad = edad;
 		this.sueldo = sueldo;
 	}
-	
+	//
 	public Representante () {
 	
 	}
