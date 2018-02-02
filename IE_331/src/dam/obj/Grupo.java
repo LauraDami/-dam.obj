@@ -30,14 +30,14 @@ public class Grupo {
 			try {
 		
 			this.nombre=nombre;
-			nombre=nombre.toLowerCase();
+			System.out.println(this.nombre);
 			this.pais=pais;
 			this.num_integrantes=n_inte;
 			discografia=new TreeMap<String, CD>();
 			representante= new Representante(nrep, edad, sueldo);
 			}catch (NumberFormatException nfe){
 				aux=false;
-				JOptionPane.showMessageDialog(null, "Debe introducir un numero para indicar el numero de integrantes");
+				JOptionPane.showMessageDialog(null, "Debe introducir un numero");
 				nfe.printStackTrace();}
 		}while (aux==false);
 	}
@@ -48,8 +48,7 @@ public class Grupo {
 		do {
 			
 			try {
-				this.nombre=nombre;
-				nombre=nombre.toLowerCase();
+				this.nombre=nombre.toLowerCase();
 				this.pais=pais;
 				this.num_integrantes=n_inte;
 				discografia=new TreeMap<String, CD>();
@@ -60,19 +59,19 @@ public class Grupo {
 				JOptionPane.showMessageDialog(null, "Debe introducir un numero para indicar el numero de integrantes");
 				nfe.printStackTrace();}
 		}while (aux==false);
-}
+	}
 	
 	
 	public String toString () {
-		return "\n"+representante+" representa al grupo "+nombre+" procedientes de "+pais+" cuya discografia est� conpuesta por: \n"+discografia +"\n";
+		return "\n"+representante+" representa al grupo "+nombre+" procedientes de "+pais+" cuya discografia est� conpuesta por: \n"+ Operaciones.imprimir_discografia(discografia) +"\n\n";
 	}
 	
 	public void disco_nuevo() {
 		boolean aux=true;
 		do {
-			
+			aux=true;
 			try {		
-				String nombre=JOptionPane.showInputDialog("Introduzca el nombre del disco que desea introducir");
+				String nombre=(JOptionPane.showInputDialog("Introduzca el nombre del disco que desea introducir")).toLowerCase();
 				int agno=Integer.parseInt(JOptionPane.showInputDialog("Introduzca el agno del disco"));
 				int pistas=Integer.parseInt(JOptionPane.showInputDialog("Introduzca el n�mero de pistas que tiene el disco"));
 				String estilo=JOptionPane.showInputDialog("Introduzca el estilo del disco que desea introducir");

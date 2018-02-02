@@ -20,10 +20,10 @@ public class Menu {
 		CD cd2=new CD("el cd2", 2015, "rock", 15);
 		CD cd3=new CD("el cd3", 2015, "clasica", 5);
 		Grupo grupo1=new Grupo ("Los sinnombre", "Espagna", 5, "Pepe", 45, 2500, cd1, "el cd1");
-		Grupo grupo2=new Grupo ("Vacio", "Suecia", 4, "Ana", 36, 1850, cd2, "el cd2");
+		Grupo grupo2=new Grupo ("vacio", "Suecia", 4, "Ana", 36, 1850, cd2, "el cd2");
 		Grupo grupo3=new Grupo ("A la espera", "Croacia", 7, "Alex", 29, 1700, cd3, "el cd3");
-		grupos.put("Los SinNombre", grupo1);
-		grupos.put("Vacio", grupo2);
+		grupos.put("los sinnombre", grupo1);
+		grupos.put("vacio", grupo2);
 		/*grupo1.disco_nuevo();
 		grupo1.disco_nuevo();
 		grupo1.eliminar_disco();
@@ -32,23 +32,28 @@ public class Menu {
 		do {
 			
 			try {
-				gestion = Integer.parseInt(JOptionPane.showInputDialog("Introduzca el número de la gestion a realizar:\n"
-						+ "\n1. Lista de grupos\n2. Información de un grupo\n3. Añadir grupo\n4. Discografía del grupo"
-						+ "\n5. Añadir disco a la discografía\n6. Información cliente\n7. Alquilar producto"
-						+ "\n8. Añadir disco a la discografía\n9. Salir\n "));
+				gestion = Integer.parseInt(JOptionPane.showInputDialog("Introduzca el numero de la gestion a realizar:\n"
+						+ "\n1. Lista de grupos\n2. Informacion de un grupo\n3. Agnadir grupo\n4. Discografia del grupo"
+						+ "\n5. Agnadir disco a la discografia\n6. Borrar disco de la discografia \n7. "
+						+ "\n8. \n9. Salir\n "));
 				
 				switch(gestion) {
 					
 				case 1:
-					//*********NO FUNCIONA CON EL MÉTODO********
-					//Operaciones.imprimir_grupos(grupos);
-					System.out.println(grupos);
+					//Lista de grupos
+					//*********NO FUNCIONA CON EL METODO********
+					Operaciones.imprimir_grupos(grupos);
+					//grupos.forEach( System.out.println(grupos+"\n") );
+					
+					//System.out.println(grupos);
 					break;
 					
 				case 2:
+					//n2. Informacion de un grupo
 					//************NO FUNCIONA***************
 					ngrupo=(JOptionPane.showInputDialog("Nombre del grupo:")).toLowerCase();
 					if (grupos.get(ngrupo)!=null) {
+						 
 						System.out.println(grupos.get(ngrupo));
 					}else {
 						JOptionPane.showMessageDialog(null, "El grupo introducido no existe");
@@ -56,9 +61,11 @@ public class Menu {
 					break;
 					
 				case 3:
+					//n3. Agnadir grupo
 					Operaciones.grupo_nuevo(grupos);
 					
 				case 4:
+					//\n4. Discografia del grupo"
 					//************NO FUNCIONA***************
 					ngrupo=(JOptionPane.showInputDialog("Nombre del grupo:")).toLowerCase();
 					if (grupos.get(ngrupo)!=null) {
@@ -68,6 +75,22 @@ public class Menu {
 					}
 					
 				case 5:
+					//n5. Agnadir disco a la discografia
+					ngrupo=(JOptionPane.showInputDialog("Nombre del grupo:"));
+					if (grupos.get(ngrupo)!=null) {
+						grupos.get(ngrupo).disco_nuevo();
+					}else {
+						JOptionPane.showMessageDialog(null, "El grupo introducido no existe");
+					}
+					
+				case 6:
+					//n6. Borrar disco de la discografia
+					ngrupo=(JOptionPane.showInputDialog("Nombre del grupo:"));
+					if (grupos.get(ngrupo)!=null) {
+						grupos.get(ngrupo).eliminar_disco();
+					}else {
+						JOptionPane.showMessageDialog(null, "El grupo introducido no existe");
+					}
 					
 					
 				}

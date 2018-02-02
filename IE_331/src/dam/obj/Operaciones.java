@@ -1,5 +1,6 @@
 package dam.obj;
 
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
@@ -19,8 +20,34 @@ public class Operaciones {
 			String key=(String) it.next();
 			a=a+grupos.get(key);
 		}return a;
+		
+	grupos.forEach(System.out.println(grupos.get));
+		
+		/*for(Map.Entry<String,Grupo> entry : grupos.entrySet()) {
+			  String key = entry.getKey();
+			  Grupo value = entry.getValue();
+
+			  System.out.println(key + " => " + value);
+			}*/
+
 			
 	}
+	
+	public static String imprimir_discografia(TreeMap <String, CD>  discografia) {
+		Iterator<String> it= discografia.keySet().iterator();
+		String a=" ";
+		while (it.hasNext()) {
+			String key=(String) it.next();
+			a=a+discografia.get(key);
+		}return a;
+		
+	//	grupos.forEach( System.out.println(grupos+"\n") );
+			
+	}
+	
+	/*public static String imprimir_representante() {
+		return "El representante "+nombre+" de "+edad+" agnos y con sueldo "+sueldo+" "
+	}*/
 	
 	
 	public static void grupo_nuevo(TreeMap <String, Grupo>  grupos) {

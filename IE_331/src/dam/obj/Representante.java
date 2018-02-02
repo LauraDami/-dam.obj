@@ -2,9 +2,9 @@ package dam.obj;
 
 public class Representante {
 
-	private String nombre;
-	private int edad;
-	private float sueldo;
+	 String nombre;
+	 int edad;
+	 float sueldo;
 	
 	public Representante (String nombre, int edad, float sueldo) {
 		this.nombre = nombre;
