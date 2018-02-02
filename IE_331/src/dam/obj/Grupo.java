@@ -1,9 +1,6 @@
 package dam.obj;
 
-
-import java.util.Map;
 import java.util.TreeMap;
-
 import javax.swing.JOptionPane;
 
 public class Grupo {
@@ -14,20 +11,30 @@ public class Grupo {
 	TreeMap <String, CD> discografia;
 	int num_integrantes;
 	
+	@Override
+	public boolean equals (Object obj) {
+		if (obj==null) {return false;}
+		if (getClass()!=obj.getClass()) {return false;}
+		final Grupo other=(Grupo)obj;
+		if (this.nombre!=other.nombre) {return false;}
+		return true;
+	}
+	
 	Grupo (){
 	}
 	//
-	Grupo (String nombre, String pais, int n_inte, Representante repre){
+	Grupo (String nombre, String pais, int n_inte, String nrep, int edad, float sueldo){
 		boolean aux=true;
 		do {
 			
 			try {
 		
 			this.nombre=nombre;
+			nombre=nombre.toLowerCase();
 			this.pais=pais;
 			this.num_integrantes=n_inte;
 			discografia=new TreeMap<String, CD>();
-			representante= new Representante();
+			representante= new Representante(nrep, edad, sueldo);
 			}catch (NumberFormatException nfe){
 				aux=false;
 				JOptionPane.showMessageDialog(null, "Debe introducir un numero para indicar el numero de integrantes");
@@ -36,15 +43,17 @@ public class Grupo {
 	}
 	
 	
-	Grupo (String nombre, String pais, int n_inte, String nrep, int edad, float sueldo){
+	Grupo (String nombre, String pais, int n_inte, String nrep, int edad, float sueldo, CD cd, String ncd){
 		boolean aux=true;
 		do {
 			
 			try {
 				this.nombre=nombre;
+				nombre=nombre.toLowerCase();
 				this.pais=pais;
 				this.num_integrantes=n_inte;
 				discografia=new TreeMap<String, CD>();
+				discografia.put(ncd, cd);
 				representante= new Representante(nrep, edad, sueldo);		
 			}catch (NumberFormatException nfe){
 				aux=false;
@@ -55,7 +64,7 @@ public class Grupo {
 	
 	
 	public String toString () {
-		return representante+" representa al grupo "+nombre+" procedientes de "+pais+" cuya discografia está conpuesta por: "+discografia ;
+		return "\n"+representante+" representa al grupo "+nombre+" procedientes de "+pais+" cuya discografia estï¿½ conpuesta por: \n"+discografia +"\n";
 	}
 	
 	public void disco_nuevo() {
@@ -65,7 +74,7 @@ public class Grupo {
 			try {		
 				String nombre=JOptionPane.showInputDialog("Introduzca el nombre del disco que desea introducir");
 				int agno=Integer.parseInt(JOptionPane.showInputDialog("Introduzca el agno del disco"));
-				int pistas=Integer.parseInt(JOptionPane.showInputDialog("Introduzca el número de pistas que tiene el disco"));
+				int pistas=Integer.parseInt(JOptionPane.showInputDialog("Introduzca el nï¿½mero de pistas que tiene el disco"));
 				String estilo=JOptionPane.showInputDialog("Introduzca el estilo del disco que desea introducir");
 				CD cd=new CD(nombre, agno, estilo, pistas);
 				discografia.put(nombre, cd);
@@ -89,10 +98,7 @@ public class Grupo {
 		}
 	}
 	
-	public void imprimir_grupo() {
-		
-	}
-
+	
 	public String getNombre() {
 		return nombre;
 	}
