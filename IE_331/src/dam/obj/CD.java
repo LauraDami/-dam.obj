@@ -16,6 +16,7 @@ public class CD {
 			this.pistas=pistas;
 		}*/
 		
+		
 		CD (String nombre, int ano, String estilo, int pistas) {
 			this.nombre=nombre;
 			nombre.toLowerCase();

@@ -14,9 +14,7 @@ public class Menu {
 		float sueldo;
 		TreeMap <String, Grupo> grupos=new TreeMap<String, Grupo>();
 		
-
 		
-		//
 		//Representante repres=new Representante(nrep1, edad1, sueldo1);
 		CD cd1=new CD("el cd1", 2015, "jazz", 9);
 		CD cd2=new CD("el cd2", 2015, "rock", 15);

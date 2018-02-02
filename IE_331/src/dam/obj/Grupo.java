@@ -22,7 +22,7 @@ public class Grupo {
 	
 	Grupo (){
 	}
-	//
+	
 	Grupo (String nombre, String pais, int n_inte, String nrep, int edad, float sueldo){
 		boolean aux=true;
 		do {

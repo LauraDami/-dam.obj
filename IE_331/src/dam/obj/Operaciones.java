@@ -22,6 +22,7 @@ public class Operaciones {
 			
 	}
 	
+	
 	public static void grupo_nuevo(TreeMap <String, Grupo>  grupos) {
 		boolean aux=true;
 		do {
