@@ -10,7 +10,11 @@ public enum Estilos {
 	CLASICA,
 	DESCONOCIDO;
 	
-	//
+	/**
+	 * Creamos un constructor para los estilos, para poder llamarlo y asignar uno de los estilos a cada CD
+	 * @param estilo
+	 * @return
+	 */
 public static Estilos getEstilo(String estilo) {
 		
 		if (estilo.equalsIgnoreCase("pop")) {
