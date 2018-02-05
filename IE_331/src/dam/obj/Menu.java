@@ -1,5 +1,6 @@
 package dam.obj;
 
+import java.util.Map.Entry;
 import java.util.TreeMap;
 
 import javax.swing.JOptionPane;
@@ -35,12 +36,16 @@ public class Menu {
 				switch(gestion) {
 					
 				case 1:
-					//n1. Lista de grupos - Imprimimos por consola la informaci贸n de los grupos almacenados
+					//n1. Lista de grupos - Imprimimos por consola la informacion de los grupos almacenados
 					
-					//Operaciones.imprimir_grupos(grupos);
-					//grupos.forEach( System.out.println(grupos+"\n") );
-					
-					System.out.println(grupos);
+					if (grupos.isEmpty()==true) {
+						System.out.println("No hay ning鷑 grupo.");
+					}else {
+					for(Entry<String, Grupo> en: grupos.entrySet()) {
+
+					    System.out.println("Grupo: "+en.getKey());
+					    System.out.println(en.getValue());
+					}}
 					break;
 					
 				case 2:
@@ -51,12 +56,13 @@ public class Menu {
 						ngrupo=(JOptionPane.showInputDialog("Nombre del grupo:")).toLowerCase();
 						if (grupos.get(ngrupo)!=null) {
 							 
-							System.out.println(grupos.get(ngrupo));
+							System.out.println(ngrupo+":\n"+grupos.get(ngrupo));
+						
 						}else {
 							JOptionPane.showMessageDialog(null, "El grupo introducido no existe");
 						}	
 					}catch (Exception e) {
-		                JOptionPane.showMessageDialog(null,"Acci贸n cancelada !!!"," ^-^ Information^-^ ",JOptionPane.INFORMATION_MESSAGE);
+		                JOptionPane.showMessageDialog(null,"Accion cancelada !!!"," ^-^ Information^-^ ",JOptionPane.INFORMATION_MESSAGE);
 		                
 		            }
 					break;
@@ -82,7 +88,7 @@ public class Menu {
 							JOptionPane.showMessageDialog(null, "El grupo introducido no existe");
 						}
 					}catch (Exception e) {
-			            JOptionPane.showMessageDialog(null,"Acci贸n cancelada !!!"," ^-^ Information^-^ ",JOptionPane.INFORMATION_MESSAGE);
+			            JOptionPane.showMessageDialog(null,"Accion cancelada !!!"," ^-^ Information^-^ ",JOptionPane.INFORMATION_MESSAGE);
 			        }
 					
 					break;
@@ -99,7 +105,7 @@ public class Menu {
 							JOptionPane.showMessageDialog(null, "El grupo introducido no existe");
 						}
 					}catch (Exception e) {
-		                JOptionPane.showMessageDialog(null,"Acci贸n cancelada !!!"," ^-^ Information^-^ ",JOptionPane.INFORMATION_MESSAGE);
+		                JOptionPane.showMessageDialog(null,"Accion cancelada !!!"," ^-^ Information^-^ ",JOptionPane.INFORMATION_MESSAGE);
 		                
 		            }
 					break;
@@ -116,7 +122,7 @@ public class Menu {
 							JOptionPane.showMessageDialog(null, "El grupo introducido no existe");
 						}
 					}catch (Exception e) {
-			            JOptionPane.showMessageDialog(null,"Acci贸n cancelada !!!"," ^-^ Information^-^ ",JOptionPane.INFORMATION_MESSAGE);
+			            JOptionPane.showMessageDialog(null,"Accion cancelada !!!"," ^-^ Information^-^ ",JOptionPane.INFORMATION_MESSAGE);
 			            
 					}
 					break;
@@ -133,7 +139,7 @@ public class Menu {
 							grupos.get(ngrupo).modificar_cd();
 						}
 					}catch (Exception e) {
-			            JOptionPane.showMessageDialog(null,"Acci贸n cancelada !!!"," ^-^ Information^-^ ",JOptionPane.INFORMATION_MESSAGE);
+			            JOptionPane.showMessageDialog(null,"Accion cancelada !!!"," ^-^ Information^-^ ",JOptionPane.INFORMATION_MESSAGE);
 			            
 					}
 					break;

@@ -87,7 +87,7 @@ public class Grupo {
 		if (discografia.isEmpty()==true) {
 			return "\n"+representante+" representa al grupo '"+nombre+"' procedientes de "+pais+". Este grupo aun no tiene discografía."+"\n\n";
 		}else {
-			return "\n"+representante+" representa al grupo '"+nombre+"' procedientes de "+pais+" cuya discografia esta conpuesta por: \n"+ Operaciones.imprimir_discografia(discografia) +"\n\n";
+			return representante+" representa al grupo '"+nombre+"' procedientes de "+pais+" cuya discografia esta conpuesta por: \n"+ Operaciones.imprimir_discografia(discografia);
 	}}
 	
 	/**
@@ -139,7 +139,7 @@ public class Grupo {
 	}
 	
 	/**
-	 * Método creado para modificar uno de los datos del CD, te la opción entre los posibles datos a modificar
+	 * Metodo creado para modificar uno de los datos del CD, te la opción entre los posibles datos a modificar
 	 */
 	public void modificar_cd() {
 		int dato=0;

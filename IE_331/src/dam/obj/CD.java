@@ -63,6 +63,6 @@ public class CD {
 		 * Modificamos el toString para que al imprimir las discografía salga mejor
 		 */
 		public String toString () {
-			return "\n"+nombre+" del "+ano+", tiene "+pistas+" pistas y el estilo es "+estilo+"\n";
+			return "- "+nombre+" del "+ano+", tiene "+pistas+" pistas y el estilo es "+estilo+"\n";
 		}
 	}
