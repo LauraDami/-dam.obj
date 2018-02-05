@@ -13,16 +13,6 @@ public class Operaciones {
 	
 	//apartado 2
 	
-	//********NO FUNCIONA**********
-	public static String imprimir_grupos(TreeMap <String, Grupo>  grupos) {
-		Iterator<String> it= grupos.keySet().iterator();
-		String a=" ";
-		while (it.hasNext()) {
-			String key=(String) it.next();
-			a=a+grupos.get(key);
-		}return a;}
-		
-		
 
 	public static String imprimir_discografia(TreeMap <String, CD>  discografia) {
 		Iterator<String> it= discografia.keySet().iterator();

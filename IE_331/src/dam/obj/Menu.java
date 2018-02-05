@@ -83,7 +83,7 @@ public class Menu {
 						if (grupos.get(ngrupo)!=null) {
 							//Operaciones.imprimir_discografia(grupos.get(ngrupo).discografia);
 							//Operaciones.imprimir_discografia(discografia);
-							System.out.println(grupos.get(ngrupo).getDiscografia());
+							System.out.println(Operaciones.imprimir_discografia(grupos.get(ngrupo).getDiscografia()));
 						}else {
 							JOptionPane.showMessageDialog(null, "El grupo introducido no existe");
 						}
