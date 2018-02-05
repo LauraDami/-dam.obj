@@ -156,7 +156,7 @@ public class Menu {
 				//cuando el datos que debemos recoger es un número
 				
 				JOptionPane.showMessageDialog(null, "Debe introducir un numero");
-				nfe.printStackTrace();}
+			}
 			catch (Exception e) {
 	            JOptionPane.showMessageDialog(null,"Accion cancelada !!!"," ^-^ Information^-^ ",JOptionPane.INFORMATION_MESSAGE);
 	       	}

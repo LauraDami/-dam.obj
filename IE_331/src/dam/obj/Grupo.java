@@ -38,16 +38,16 @@ public class Grupo {
 			
 			try {
 		
-			this.nombre=nombre;
-			System.out.println(this.nombre);
-			this.pais=pais;
-			this.num_integrantes=n_inte;
-			discografia=new TreeMap<String, CD>();
-			representante= new Representante(nrep, edad, sueldo);
+				this.nombre=nombre;
+				System.out.println(this.nombre);
+				this.pais=pais;
+				this.num_integrantes=n_inte;
+				discografia=new TreeMap<String, CD>();
+				representante= new Representante(nrep, edad, sueldo);
 			}catch (NumberFormatException nfe){
 				aux=false;
 				JOptionPane.showMessageDialog(null, "Debe introducir un numero");
-				nfe.printStackTrace();}
+			}
 		}while (aux==false);
 	}
 	
@@ -77,7 +77,7 @@ public class Grupo {
 			}catch (NumberFormatException nfe){
 				aux=false;
 				JOptionPane.showMessageDialog(null, "Debe introducir un numero para indicar el numero de integrantes");
-				nfe.printStackTrace();}
+			}	
 		}while (aux==false);
 	}
 	
@@ -111,7 +111,7 @@ public class Grupo {
 			}catch (NumberFormatException nfe){
 				aux=false;
 				JOptionPane.showMessageDialog(null, "Debe introducir un numero");
-				nfe.printStackTrace();}
+			}
 			
 		}while (aux==false);
 						
@@ -173,7 +173,7 @@ public class Grupo {
 			}catch(NumberFormatException nfe) {
 				
 				JOptionPane.showMessageDialog(null, "Debe introducir un numero");
-				nfe.printStackTrace();}
+				}
 			catch (Exception e) {
 		        JOptionPane.showMessageDialog(null,"Acción cancelada !!!"," ^-^ Information^-^ ",JOptionPane.INFORMATION_MESSAGE);
 		       
