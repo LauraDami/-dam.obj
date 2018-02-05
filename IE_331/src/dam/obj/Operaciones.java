@@ -11,8 +11,12 @@ import javax.swing.JOptionPane;
 public class Operaciones {
 	
 	
-	//apartado 2
 	
+	/**
+	 * Metodo para que se imprima en consola la discografia	
+	 * @param discografia
+	 * @return
+	 */
 
 	public static String imprimir_discografia(TreeMap <String, CD>  discografia) {
 		Iterator<String> it= discografia.keySet().iterator();
