@@ -120,7 +120,7 @@ public class Grupo {
 	/**
 	 * Metodo creado para eliminar un disco de una discografia, primero comprueba si el disco esta en 
 	 * dicha discografia
-	 * @return
+	 * @return true(cd eliminado)/false(cd no eliminado)
 	 */
 	public boolean eliminar_disco () {
 		try {

@@ -13,7 +13,7 @@ public enum Estilos {
 	/**
 	 * Creamos un constructor para los estilos, para poder llamarlo y asignar uno de los estilos a cada CD
 	 * @param estilo
-	 * @return
+	 * @return Estilo
 	 */
 public static Estilos getEstilo(String estilo) {
 		

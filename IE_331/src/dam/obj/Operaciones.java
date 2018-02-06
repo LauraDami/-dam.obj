@@ -32,7 +32,7 @@ public class Operaciones {
 	/**
 	 * Metodo para que se imprima en consola la discografia	
 	 * @param discografia
-	 * @return
+	 * @return String 
 	 */
 
 	public static String imprimir_discografia(TreeMap <String, CD>  discografia) {
@@ -104,7 +104,7 @@ public class Operaciones {
 	/**
 	 * Metodo para eliminar un grupo del treemap
 	 * @param grupos
-	 * @return
+	 * @return true (grupo eliminado)/false (grupo no eliminado)
 	 */
 	public static boolean eliminar_grupo (TreeMap <String, Grupo>  grupos) {
 		try {
