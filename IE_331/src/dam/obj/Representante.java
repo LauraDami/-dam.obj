@@ -6,12 +6,18 @@ public class Representante {
 	 int edad;
 	 float sueldo;
 	
+	 /**
+	  * Constructor de representantes
+	  * @param nombre
+	  * @param edad
+	  * @param sueldo
+	  */
 	public Representante (String nombre, int edad, float sueldo) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.sueldo = sueldo;
 	}
-	//
+	
 	public Representante () {
 	
 	}

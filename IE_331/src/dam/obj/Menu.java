@@ -42,21 +42,21 @@ public class Menu {
 					break;
 					
 				case 2:
-					//n2. Informacion de un grupo - Imprimimos por consola la información del grupo que elijamos, primero comprueba
-					//que el grupo exista
+					//n2. Informacion de un grupo - Imprimimos por consola la informacion del grupo que elijamos, 
+					//primero comprueba que el grupo exista
 										
 					Operaciones.info_grupo(grupos);
 					break;
 					
 				case 3:
-					//n3. Agnadir grupo - Añadimos un nuevo grupo a una discografía
+					//n3. Agnadir grupo - A�adimos un nuevo grupo a una discografia
 					
 					Operaciones.grupo_nuevo(grupos);
 					break;
 					
 				case 4:
-					//\n4. Discografia del grupo - Imprimimos por consola la discografía de un grupo que elijamos, primero comprueba
-					//que el grupo exista
+					//n4. Discografia del grupo - Imprimimos por consola la discografia de un grupo que elijamos, 
+					//primero comprueba que el grupo exista
 					
 					try {
 						
@@ -73,8 +73,8 @@ public class Menu {
 					break;
 					
 				case 5:
-					//n5. Agnadir disco a la discografia - Añadimos un disco a la discografía del grupo que elijamos, primero
-					//comprobamos que el grupo exista
+					//n5. Agnadir disco a la discografia - A�adimos un disco a la discografia del grupo que 
+					//elijamos, primero comprobamos que el grupo exista
 					
 					try {
 						ngrupo=(JOptionPane.showInputDialog("Nombre del grupo:")).toLowerCase();
@@ -90,8 +90,8 @@ public class Menu {
 					break;
 					
 				case 6:
-					//n6. Borrar disco de la discografia - Borramos un disco de la discografía del grupo que elijamos, primero
-					//comprobamos que el grupo exista
+					//n6. Borrar disco de la discografia - Borramos un disco de la discografia del grupo que 
+					//elijamos, primero comprobamos que el grupo exista
 					
 					try {
 						ngrupo=(JOptionPane.showInputDialog("Nombre del grupo:")).toLowerCase();
@@ -107,8 +107,8 @@ public class Menu {
 					break;
 					
 				case 7:	
-					//n7. Modificar datos de un CD - Modificamos un disco de la discografía del grupo que elijamos, primero
-					//comprobamos que el grupo exista
+					//n7. Modificar datos de un CD - Modificamos un disco de la discografia del grupo que elijamos, 
+					//primero comprobamos que el grupo exista
 					
 					try {
 						ngrupo=(JOptionPane.showInputDialog("Nombre del grupo:")).toLowerCase();
@@ -125,14 +125,13 @@ public class Menu {
 					
 				case 8:
 					//n8. Eliminar grupo - Eliminamos el grupo que elijamos
-					//ngrupo=(JOptionPane.showInputDialog("Nombre del grupo:"));
 					Operaciones.eliminar_grupo(grupos);
 					break;
 					
 				}
 			
-			}catch(NumberFormatException nfe){  //usamos el try catch para que no de error si se introducen algo que no sean números
-				//cuando el datos que debemos recoger es un número
+			}catch(NumberFormatException nfe){  //usamos el try catch para que no de error si se introducen algo 
+				//que no sean numeros cuando el datos que debemos recoger es un numero
 				
 				JOptionPane.showMessageDialog(null, "Debe introducir un numero");
 			}
@@ -140,8 +139,8 @@ public class Menu {
 	            JOptionPane.showMessageDialog(null,"Accion cancelada !!!"," ^-^ Information^-^ ",JOptionPane.INFORMATION_MESSAGE);
 	       	}
 				
-		}while(gestion!=9);   //usamos el do while para que nos siga apareciendo el menú y podamos seguir haciendo gestiones hasta que 
-		//decidamos salir de él.
+		}while(gestion!=9);   //usamos el do while para que nos siga apareciendo el menu y podamos seguir haciendo  
+		//gestiones hasta que decidamos salir de el.
 				
 				
 				

@@ -4,7 +4,7 @@ package dam.obj;
 public class CD {
 
 	/**
-	 * Atributos de los CDs (nombre, año, número de pistas, y estilo de música
+	 * Atributos de los CDs (nombre, a�o, numero de pistas, y estilo de musica
 	 */
 		private String nombre;
 		private int ano;

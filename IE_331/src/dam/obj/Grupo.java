@@ -24,7 +24,7 @@ public class Grupo {
 	}
 	
 	/**
-	 * Constructor para grupo, este es el constructor usado para añadir nuevos grupos
+	 * Constructor para grupo, este es el constructor usado para a�adir nuevos grupos
 	 * @param nombre
 	 * @param pais
 	 * @param n_inte
@@ -91,7 +91,7 @@ public class Grupo {
 	}}
 	
 	/**
-	 * Método creado para añadir un disco nuevo a una discografía
+	 * Metodo creado para a�adir un disco nuevo a una discografia
 	 */
 	public void disco_nuevo() {
 		boolean aux=true;
@@ -118,7 +118,8 @@ public class Grupo {
 	}
 	
 	/**
-	 * Método creado para eliminar un disco de una discografía, primero comprueba si el disco está en dicha discografía
+	 * Metodo creado para eliminar un disco de una discografia, primero comprueba si el disco esta en 
+	 * dicha discografia
 	 * @return
 	 */
 	public boolean eliminar_disco () {
@@ -139,7 +140,7 @@ public class Grupo {
 	}
 	
 	/**
-	 * Metodo creado para modificar uno de los datos del CD, te la opción entre los posibles datos a modificar
+	 * Metodo creado para modificar uno de los datos del CD, te la opcion entre los posibles datos a modificar
 	 */
 	public void modificar_cd() {
 		int dato=0;
@@ -175,7 +176,7 @@ public class Grupo {
 				JOptionPane.showMessageDialog(null, "Debe introducir un numero");
 				}
 			catch (Exception e) {
-		        JOptionPane.showMessageDialog(null,"Acción cancelada !!!"," ^-^ Information^-^ ",JOptionPane.INFORMATION_MESSAGE);
+		        JOptionPane.showMessageDialog(null,"Accion cancelada !!!"," ^-^ Information^-^ ",JOptionPane.INFORMATION_MESSAGE);
 		       
 			}
 						
