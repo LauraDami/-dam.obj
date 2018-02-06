@@ -35,7 +35,7 @@ public class Grupo {
 	Grupo (String nombre, String pais, int n_inte, String nrep, int edad, float sueldo){
 		boolean aux=true;
 		do {
-			
+			aux=true;
 			try {
 		
 				this.nombre=nombre;
@@ -66,7 +66,7 @@ public class Grupo {
 	Grupo (String nombre, String pais, int n_inte, String nrep, int edad, float sueldo, CD cd, String ncd){
 		boolean aux=true;
 		do {
-			
+			aux=true;
 			try {
 				this.nombre=nombre.toLowerCase();
 				this.pais=pais;
@@ -85,9 +85,9 @@ public class Grupo {
 	public String toString () {
 		
 		if (discografia.isEmpty()==true) {
-			return "\n"+representante+" representa al grupo '"+nombre+"' procedientes de "+pais+". Este grupo aun no tiene discografía."+"\n\n";
+			return "\n"+representante+" representa al grupo '"+nombre+"' originarios de "+pais+". Este grupo aun no tiene discografia."+"\n\n";
 		}else {
-			return representante+" representa al grupo '"+nombre+"' procedientes de "+pais+" cuya discografia esta conpuesta por: \n"+ Operaciones.imprimir_discografia(discografia);
+			return representante+" representa al grupo '"+nombre+"' originarios de "+pais+" cuya discografia esta compuesta por: \n"+ Operaciones.imprimir_discografia(discografia);
 	}}
 	
 	/**

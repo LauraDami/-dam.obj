@@ -17,10 +17,10 @@ public class Menu {
 		//Incluimos algunos CDs y grupos para hacer pruebas y aligerar el proceso
 		CD cd1=new CD("cd1_prueba", 2015, "jazz", 9);
 		CD cd2=new CD("cd2_prueba", 2015, "rock", 15);
-		CD cd3=new CD("cd3_prueba", 2015, "clasica", 5);
+		//CD cd3=new CD("cd3_prueba", 2015, "clasica", 5);
 		Grupo grupo1=new Grupo ("Los sinnombre", "Espagna", 5, "Pepe", 45, 2500, cd1, "cd1_prueba");
 		Grupo grupo2=new Grupo ("vacio", "Suecia", 4, "Ana", 36, 1850, cd2, "cd2_prueba");
-		Grupo grupo3=new Grupo ("a la espera", "Croacia", 7, "Alex", 29, 1700, cd3, "cd3_prueba");
+		//Grupo grupo3=new Grupo ("a la espera", "Croacia", 7, "Alex", 29, 1700, cd3, "cd3_prueba");
 		grupos.put("los sinnombre", grupo1);
 		grupos.put("vacio", grupo2);
 
