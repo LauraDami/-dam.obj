@@ -38,33 +38,14 @@ public class Menu {
 				case 1:
 					//n1. Lista de grupos - Imprimimos por consola la informacion de los grupos almacenados
 					
-					if (grupos.isEmpty()==true) {
-						System.out.println("No hay ningún grupo.");
-					}else {
-					for(Entry<String, Grupo> en: grupos.entrySet()) {
-
-					    System.out.println("Grupo: "+en.getKey());
-					    System.out.println(en.getValue());
-					}}
+					Operaciones.imprimir_grupos(grupos);
 					break;
 					
 				case 2:
 					//n2. Informacion de un grupo - Imprimimos por consola la informaciÃ³n del grupo que elijamos, primero comprueba
 					//que el grupo exista
 										
-					try {
-						ngrupo=(JOptionPane.showInputDialog("Nombre del grupo:")).toLowerCase();
-						if (grupos.get(ngrupo)!=null) {
-							 
-							System.out.println(ngrupo+":\n"+grupos.get(ngrupo));
-						
-						}else {
-							JOptionPane.showMessageDialog(null, "El grupo introducido no existe");
-						}	
-					}catch (Exception e) {
-		                JOptionPane.showMessageDialog(null,"Accion cancelada !!!"," ^-^ Information^-^ ",JOptionPane.INFORMATION_MESSAGE);
-		                
-		            }
+					Operaciones.info_grupo(grupos);
 					break;
 					
 				case 3:
@@ -81,8 +62,6 @@ public class Menu {
 						
 						ngrupo=(JOptionPane.showInputDialog("Nombre del grupo:")).toLowerCase();
 						if (grupos.get(ngrupo)!=null) {
-							//Operaciones.imprimir_discografia(grupos.get(ngrupo).discografia);
-							//Operaciones.imprimir_discografia(discografia);
 							System.out.println(Operaciones.imprimir_discografia(grupos.get(ngrupo).getDiscografia()));
 						}else {
 							JOptionPane.showMessageDialog(null, "El grupo introducido no existe");

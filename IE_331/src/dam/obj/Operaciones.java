@@ -4,11 +4,28 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.Map.Entry;
 
 import javax.swing.JOptionPane;
 
 
 public class Operaciones {
+	
+		
+	/**
+	 * Método para imprimir por consola los grupos
+	 * @param grupos
+	 */
+	public static void imprimir_grupos(TreeMap <String, Grupo> grupos) {
+		if (grupos.isEmpty()==true) {
+			System.out.println("No hay ningún grupo.");
+		}else {
+		for(Entry<String, Grupo> en: grupos.entrySet()) {
+
+		   System.out.println("Grupo: "+en.getKey());
+		    System.out.println(en.getValue());
+		}}
+	}
 	
 	
 	
@@ -28,6 +45,26 @@ public class Operaciones {
 			
 	}
 	
+	
+	/**
+	 * Método para dar la información del grupo que se elija
+	 * @param grupos
+	 */
+	public static void info_grupo(TreeMap <String, Grupo> grupos) {
+		try {
+			String ngrupo=(JOptionPane.showInputDialog("Nombre del grupo:")).toLowerCase();
+			if (grupos.get(ngrupo)!=null) {
+				 
+				System.out.println(ngrupo+":\n"+grupos.get(ngrupo));
+			
+			}else {
+				JOptionPane.showMessageDialog(null, "El grupo introducido no existe");
+			}	
+		}catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"Accion cancelada !!!"," ^-^ Information^-^ ",JOptionPane.INFORMATION_MESSAGE);
+            
+        }
+	}
 		
 	/**
 	 * Metodo para añadir un grupo al treemap, añadimos el try catch para que no de error si se mete algun datos que no sea numÃ©rico
